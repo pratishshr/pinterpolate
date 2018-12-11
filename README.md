@@ -2,7 +2,6 @@
 
 [![npm](https://img.shields.io/npm/v/pinterpolate.svg)](https://www.npmjs.com/package/pinterpolate)
 [![Build Status](https://travis-ci.org/pratishshr/pinterpolate.svg?branch=master)](https://travis-ci.org/pratishshr/pinterpolate)
-[![Build status](https://ci.appveyor.com/api/projects/status/5bb97ugj75as6c9n/branch/master?svg=true)](https://ci.appveyor.com/project/pratishshr/pinterpolate/branch/master)
 [![npm](https://img.shields.io/npm/dt/pinterpolate.svg)](https://www.npmjs.com/package/pinterpolate)
 
 > Simple string formatting.
