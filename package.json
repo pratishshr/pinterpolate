@@ -1,0 +1,35 @@
+{
+  "name": "pinterpolate",
+  "version": "0.0.1",
+  "description": "Simple string interpolation",
+  "main": "build/lib.js",
+  "module": "src/index.js",
+  "author": "Pratish Shrestha <pratishshr@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "webpack",
+    "test": "mocha --require babel-register",
+    "test:watch": "mocha --require babel-register --watch"
+  },
+  "keywords": [
+    "format",
+    "interpolate",
+    "string format",
+    "string interpolate",
+    "string interpolation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pratishshr/pinterpolate"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "webpack": "^3.8.1"
+  }
+}
