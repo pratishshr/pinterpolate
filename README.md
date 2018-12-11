@@ -5,7 +5,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/5bb97ugj75as6c9n/branch/master?svg=true)](https://ci.appveyor.com/project/pratishshr/pinterpolate/branch/master)
 [![npm](https://img.shields.io/npm/dt/pinterpolate.svg)](https://www.npmjs.com/package/pinterpolate)
 
-> Copy file contents to clipboard.
+> Simple string formatting.
 
 ## Installation
 
@@ -25,9 +25,9 @@ Useful for formatting strings.
 ```js
 import pinterpolate from 'pinterpolate';
 
-interpolate('/users/:id', { id: 1 });
+pinterpolate('/users/:id', { id: 1 });
 // => '/users/1'
 
-interpolate(':name is here.', { name: 'Barbara' });
+pinterpolate(':name is here.', { name: 'Barbara' });
 // => 'Barbaba is here.'
 ```
