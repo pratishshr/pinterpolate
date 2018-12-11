@@ -26,4 +26,10 @@ describe('interpolate()', () => {
 
     expect(pinterpolate(str, params)).equal(expectedStr);
   });
+
+  it('should return the string supplied if params is null or undefined', () => {
+    const str = 'Test';
+
+    expect(pinterpolate(str, null)).equal(str);
+  });
 });
