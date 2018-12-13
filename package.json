@@ -1,6 +1,6 @@
 {
   "name": "pinterpolate",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simple string interpolation",
   "main": "build/lib.js",
   "module": "src/index.js",
