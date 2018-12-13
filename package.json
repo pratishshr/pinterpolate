@@ -9,8 +9,8 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "webpack",
-    "test": "mocha --require babel-register",
-    "test:watch": "mocha --require babel-register --watch"
+    "test": "mocha test/**/*.spec.js --require ignore-styles --require @babel/polyfill --require @babel/register --recursive",
+    "test:watch": "mocha test/**/*.spec.js --require ignore-styles --require @babel/polyfill --require @babel/register --recursive -w"
   },
   "keywords": [
     "format",
@@ -24,12 +24,18 @@
     "url": "https://github.com/pratishshr/pinterpolate"
   },
   "devDependencies": {
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-register": "^6.26.0",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
     "chai": "^4.1.2",
+    "ignore-styles": "^5.0.1",
     "mocha": "^4.0.1",
     "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.2.0"
   }
 }
