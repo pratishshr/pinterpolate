@@ -8,12 +8,12 @@
 
 ## Installation
 
-```bash
-npm install --save pinterpolate
+```sh
+$ npm install --save pinterpolate
 ```
 
-```bash
-yarn add pinterpolate
+```sh
+$ yarn add pinterpolate
 ```
 
 Build supplied string by interpolating properties after delimiter ':' with the given parameters.
