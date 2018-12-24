@@ -64,7 +64,7 @@ export Router = () => (
 );
 
 // For links
-export Component = ({userId, recordId) => (
+export Component = ({userId, recordId}) => (
   <div>
     <Link to={pinterpolate(routes.USERS_RECORD, {userId, recordId})} />
     <Link to={pinterpolate(routes.USER, {userId})} />
