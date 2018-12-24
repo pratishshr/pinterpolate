@@ -49,7 +49,7 @@ export function fetchUsersImage(userId, imageId) {
 }
 ```
 
-### For React router routes
+### For React Router routes
 ```js
 // constants/routes.js
 const USER = '/users/:userId'
