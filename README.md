@@ -34,15 +34,12 @@ pinterpolate(':name is here.', { name: 'Barbara' });
 ## Use Case
 
 I mostly use this utility in conjuction with my API endpoints and React Router routes.
-
-### Example
-
 #### For APIs
 ```js
 const USERS_IMAGE = '/users/:userId/images/:imageId'
 
 export function fetchUsersImage(userId, imageId) {
-  return http.get(pinterpolate(USERS_IMAGE,{
+  return http.get(pinterpolate(USERS_IMAGE, {
     userId,
     imageId
   })
