@@ -50,7 +50,7 @@ export function fetchUsersImage(userId, imageId) {
 ```js
 // constants/routes.js
 const USER = '/users/:userId'
-const USERS_RECORD = '/users/:userId/records/recordId';
+const USERS_RECORD = '/users/:userId/records/:recordId';
 
 // Router.js
 export Router = () => (
