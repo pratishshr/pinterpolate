@@ -8,7 +8,7 @@ describe('interpolate()', () => {
     const params = {
       one: 1,
       two: 2,
-      three: 3
+      three: 3,
     };
     const expectedStr = '1 2 3';
 
@@ -20,7 +20,7 @@ describe('interpolate()', () => {
     const params = {
       one: 1,
       two: 2,
-      three: undefined
+      three: undefined,
     };
     const expectedStr = '1 2 ';
 
@@ -31,5 +31,16 @@ describe('interpolate()', () => {
     const str = 'Test';
 
     expect(pinterpolate(str, null)).equal(str);
+  });
+
+  it('shoud not interpolate keys with same initial key name', () => {
+    const str = 'Test';
+
+    expect(
+      pinterpolate(':one :onextwo', {
+        one: '1',
+        onextwo: '2',
+      })
+    ).equal('1 2');
   });
 });
