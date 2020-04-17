@@ -10,9 +10,8 @@
  *
  * @returns string
  */
-export default function interpolate(str, params) {
+export default function interpolate(str, params = {}) {
   let formattedString = str;
-  params = params || {};
 
   for (const [key, value] of Object.entries(params)) {
     const val = value || '';
