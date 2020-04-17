@@ -43,4 +43,14 @@ describe('interpolate()', () => {
       })
     ).equal('1 2');
   });
+
+  const str = 'This is test to check if :library passes this test.';
+
+  it('shoud not interpolate keys with same initial key name', () => {
+    expect(
+      pinterpolate(str, {
+        library: 'pinterpolate',
+      })
+    ).equal('This is test to check if pinterpolate passes this test.');
+  });
 });
