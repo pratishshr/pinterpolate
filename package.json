@@ -34,9 +34,7 @@
     "ignore-styles": "^5.0.1",
     "mocha": "^4.0.1",
     "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
-  },
-  "dependencies": {
+    "webpack-cli": "^3.1.2",
     "@babel/runtime": "^7.2.0"
   }
 }
