@@ -16,7 +16,10 @@ export default function interpolate(str, params) {
 
   for (const [key, value] of Object.entries(params)) {
     const val = value || '';
-    formattedString = formattedString.replace(new RegExp(':' + key, 'gi'), val.toString());
+    formattedString = formattedString.replace(
+      new RegExp(':' + key + '\\b', 'gi'),
+      val.toString()
+    );
   }
 
   return formattedString;
