@@ -31,6 +31,7 @@ describe('interpolate()', () => {
     const str = 'Test';
 
     expect(pinterpolate(str, null)).equal(str);
+    expect(pinterpolate(str, undefined)).equal(str);
   });
 
   it('shoud not interpolate keys with same initial key name', () => {
