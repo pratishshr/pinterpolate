@@ -1,5 +1,5 @@
-type anyObject = {
-    [key: string]: any,
-};
+export interface Params {
+    [key: string]: string | number;
+}
 
-export default function interpolate(str: string, params: anyObject): string;
+export default function interpolate(str: string, params: Params): string;
