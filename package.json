@@ -39,5 +39,6 @@
   },
   "engines": {
     "node": ">=8"
-  }
+  },
+  "types": "./index.d.ts"
 }
