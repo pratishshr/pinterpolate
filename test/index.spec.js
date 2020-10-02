@@ -8,7 +8,7 @@ describe('interpolate()', () => {
     const params = {
       one: 1,
       two: 2,
-      three: 3,
+      three: 3
     };
     const expectedStr = '1 2 3';
 
@@ -20,7 +20,7 @@ describe('interpolate()', () => {
     const params = {
       one: 1,
       two: 2,
-      three: undefined,
+      three: undefined
     };
     const expectedStr = '1 2 ';
 
@@ -34,24 +34,54 @@ describe('interpolate()', () => {
     expect(pinterpolate(str, undefined)).equal(str);
   });
 
-  it('shoud not interpolate keys with same initial key name', () => {
+  it('should not interpolate keys with same initial key name', () => {
     const str = 'Test';
 
     expect(
       pinterpolate(':one :onextwo', {
         one: '1',
-        onextwo: '2',
+        onextwo: '2'
       })
     ).equal('1 2');
   });
 
-  const str = 'This is test to check if :library passes this test.';
+  it('should not interpolate keys with same initial key name', () => {
+    const str = 'This is test to check if :library passes this test.';
 
-  it('shoud not interpolate keys with same initial key name', () => {
     expect(
       pinterpolate(str, {
-        library: 'pinterpolate',
+        library: 'pinterpolate'
       })
     ).equal('This is test to check if pinterpolate passes this test.');
+  });
+
+  it('should add queries to link for search', () => {
+    const str = 'https://github.com/search';
+    const params = {}; // can be empty string, null or undefined
+    const queries = {
+      l: 'JavaScript',
+      q: 'label:"help+wanted"',
+      type: 'Issues'
+    };
+
+    expect(pinterpolate(str, params, queries)).equal(
+      'https://github.com/search?l=JavaScript&q=label:"help+wanted"&type=Issues'
+    );
+  });
+
+  it('should add the queries for name and address to link', () => {
+    const str = '/:userId/:companyId';
+    const params = {
+      userId: '456',
+      companyId: '123'
+    };
+    const queries = {
+      name: 'John',
+      address: 'KTM'
+    };
+
+    expect(pinterpolate(str, params, queries)).equal(
+      '/456/123?name=John&address=KTM'
+    );
   });
 });

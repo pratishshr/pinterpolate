@@ -29,12 +29,20 @@ pinterpolate('/users/:id', { id: 1 });
 
 pinterpolate(':name is here.', { name: 'Barbara' });
 // => 'Barbaba is here.'
+
+pinterpolate('/query', {}, { name: 'John', address: 'Nepal' });
+// => '/query?name=John&address=Nepal'
+
+pinterpolate('/users/:id', { id: 1 }, { name: 'John' });
+// => '/users/1?name=John'
 ```
 
 ## Use Case
 
 I mostly use this utility in conjuction with my API endpoints and React Router routes.
+
 #### For APIs
+
 ```js
 const USERS_IMAGE = '/users/:userId/images/:imageId'
 
@@ -47,6 +55,7 @@ export function fetchUsersImage(userId, imageId) {
 ```
 
 #### For React Router routes
+
 ```js
 // constants/routes.js
 const USER = '/users/:userId'
@@ -54,7 +63,7 @@ const USERS_RECORD = '/users/:userId/records/:recordId';
 
 // Router.js
 export Router = () => (
-  <Router> 
+  <Router>
     <Route path={routes.USER} component={UserComponent} />
     <Route path={routes.USERS_RECORD} component={RecordComponent} />
   </Router>
